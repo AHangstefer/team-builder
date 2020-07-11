@@ -10,8 +10,8 @@ function App() {
   return (
     <div className="App">
       <h1>Members</h1>
-      <TeamMemberList member={members} setMemeber={setMembers} />
-      <Form member={members} />
+      <TeamMemberList members={members} setMembers={setMembers} />
+      <Form members={members} setMembers={setMembers} />
     </div>
   );
 }

@@ -1,8 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 
 const Form = props => {
     const defaultState = { name:"", email:"", roll:""};
-    const [newForm, setNewForm] = React.useState(defaultState);
+    const [newForm, setNewForm] = useState(defaultState);
 
     const handleChange =event => {
         console.log(event.target.value);
@@ -15,7 +15,7 @@ const Form = props => {
     const handleSubmit = event =>{
         event.preventDefault();
         setNewForm(defaultState);
-        props.setForms([...props.form, newForm]);
+        props.setMembers([...props.members, newForm]);
     };
 
     return (
